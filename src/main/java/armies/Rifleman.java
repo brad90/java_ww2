@@ -13,10 +13,4 @@ public class Rifleman extends Soldier {
         this.axisAllies = axisAllies;
     }
 
-
-
-
-
-
-
 }

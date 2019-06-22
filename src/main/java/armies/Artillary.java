@@ -7,4 +7,5 @@ public class Artillary extends Soldier{
     public Artillary(String companyName, Weapon soldierType, Defences defence, int companyHealth) {
         super(companyName, soldierType, defence, companyHealth);
     }
+
 }

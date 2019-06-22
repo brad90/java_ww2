@@ -13,4 +13,6 @@ public class Tank extends Soldier {
         super(companyName, soldierType, defence, companyHealth);
         this.axisAllies = axisAllies;
     }
+
+
 }

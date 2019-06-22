@@ -11,4 +11,7 @@ public class MachineGunner extends Soldier {
         super(companyName, soldierType, defence, companyHealth);
         this.alliesAxis = alliesAxis;
     }
+
+
+
 }

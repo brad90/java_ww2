@@ -15,6 +15,7 @@ public class RiflemanTest {
     Rifleman rifleman;
     Tank tankGerman;
     MachineGunner machineGunner;
+    MachineGunner machineGunner2;
 
     @Before
     public void before(){
@@ -23,6 +24,7 @@ public class RiflemanTest {
         tankGerman = new Tank("Panzer Group Kleist", Weapon.TANK, Defences.NONE, 100, AxisAllies.AXIES) {
         };
         machineGunner = new MachineGunner("Army Group Wöhler", Weapon.MACHINEGUN,Defences.BUNKER,50, AxisAllies.AXIES);
+        machineGunner2 = new MachineGunner("Army Group Wöhler", Weapon.MACHINEGUN,Defences.BUNKER,4, AxisAllies.AXIES);
     }
 
     @Test
@@ -61,5 +63,18 @@ public class RiflemanTest {
     public void attackEnemyWithDefence(){
         rifleman.attack(machineGunner);
         assertEquals(54, machineGunner.getCompanyHealth());
+    }
+
+
+
+    @Test
+    public void surrenderOrFightTODeath(){
+        rifleman.attack(machineGunner2);
+        rifleman.attack(machineGunner2);
+        rifleman.attack(machineGunner2);
+        rifleman.attack(machineGunner2);
+        rifleman.attack(machineGunner2);
+        rifleman.attack(machineGunner2);
+        assertEquals(true, machineGunner2.shouldSoldiersSurrender());
     }
 }

@@ -1,6 +1,5 @@
 package behaviours;
 
-
 import armies.Soldier;
 
 public interface IAttack {
